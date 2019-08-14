@@ -3,6 +3,16 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
+	<servlet>
+		<servlet-name>LoginForm</servlet-name>
+		<display-name>LoginForm</display-name>
+		<description></description>
+		<servlet-class>com.dxc.servlet.LoginForm</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginForm</servlet-name>
+		<url-pattern>/LoginForm</url-pattern>
+	</servlet-mapping>
 <!--    <welcome-file>LoginForm.jsp</welcome-file>
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>

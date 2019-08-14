@@ -17,7 +17,7 @@
 	<div class="materialContainer">
 
 
-		<div class="box">
+		<form class="box">
 
 			<div class="title">LOGIN</div>
 
@@ -39,7 +39,7 @@
 
 			<a href="" class="pass-forgot">Forgot your password?</a>
 
-		</div>
+		</form>
 
 		<div class="overbox">
 			<div class="material-button alt-2">
