@@ -16,12 +16,14 @@ public class ConnectionMysql {
 		Connection connection = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/user", "root", "ptlam1906");
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/user", "root", "root");
 
-		} catch (ClassNotFoundException | SQLException e) {
+		} catch (SQLException e) {
 			connection = null;
 
 			System.out.println("Where is your MySQL JDBC Driver?");
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 

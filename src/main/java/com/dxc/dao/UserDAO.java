@@ -8,5 +8,5 @@ import java.util.List;
 import com.dxc.model.User;
 
 public interface UserDAO {
-	public List<User> listUser();
+	public boolean validate(User user);
 }
