@@ -38,7 +38,7 @@ public class LoginForm extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+
 		String userRe=request.getParameter("name");
 		String passRe=request.getParameter("pass");
 
@@ -46,13 +46,13 @@ public class LoginForm extends HttpServlet {
 		user.setUserName(userRe);
 		user.setPassWord(passRe);
 		if (userDao.validate(user)) {
-		    //HttpSession session = request.getSession();
-		    // session.setAttribute("username",username);
+		    HttpSession session = request.getSession();
+		    session.setAttribute("username",userRe);
+			session.setAttribute("password", passRe);
+			session.setMaxInactiveInterval(10);
 		    response.sendRedirect("LoginSuccess.jsp");
 		} else {
-		    HttpSession session = request.getSession();
-		    //session.setAttribute("user", username);
-		    //response.sendRedirect("login.jsp");
+		    response.sendRedirect("LoginForm.jsp");
 		}
 	}
 
