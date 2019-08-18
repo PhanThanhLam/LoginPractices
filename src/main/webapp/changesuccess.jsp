@@ -11,19 +11,12 @@
 	<div
 		style="width: 500px; margin: 50px auto; background: #D0D01A; padding: 30px">
 		<h2>Admin management</h2>
-		<%
-			if (session != null && session.getAttribute("username") != null) {
-		%>
+
 		<h2>
-			Username :<strong><%=session.getAttribute("username")%></strong>
+			Change Password Successfully !!!
 		</h2>
-		<%
-			}
-		%>
-		<ul>
-			<li><a href="Logout" class="round green">Logout<span class="round">This is Logout Button.</span></a></li>
-			<li><a href="changepassword.jsp" class="round red">Change<br>PassW<span class="round">Click on to change your password. </span></a></li>
-		</ul>
+
+
 	</div>
 </body>
 </html>

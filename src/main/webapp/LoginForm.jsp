@@ -16,7 +16,6 @@
 
 	<div class="materialContainer">
 
-
 		<form action="LoginForm" name"loginform" class="box" method="Post">
 
 			<div class="title">LOGIN</div>
